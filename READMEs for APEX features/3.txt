@@ -1,0 +1,9 @@
+Name 1: Shubham Thakkar
+EID 1: st25726
+CSID 1: sthakkar
+Email 1: shubhamthakkar14@gmail.com
+
+Name 2: Jorge Munoz
+EID 2: jrm5334
+CSID 2: jorgmuno
+Email 2: jorgmuno@utexas.edu

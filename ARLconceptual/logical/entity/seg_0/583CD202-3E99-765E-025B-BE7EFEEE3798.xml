@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="583CD202-3E99-765E-025B-BE7EFEEE3798" name="NL_Notification_List">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-23 21:21:14 UTC</createdTime>
+<ownerDesignName>ARLconceptual</ownerDesignName>
+<engineerTo>
+<item key="7BFB7F21-3CE5-3F74-5424-AD96AB389096" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>3D850615-122E-56CC-56DE-F19149BEA491</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="notification_list_id" id="05643DBC-8890-F11F-C102-33B00C15BB7F">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-23 21:21:35 UTC</createdTime>
+<ownerDesignName>ARLconceptual</ownerDesignName>
+<engineerTo>
+<item key="7BFB7F21-3CE5-3F74-5424-AD96AB389096" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="description" id="B3882425-6132-C0C8-CED1-7D66A038907C">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-23 21:23:25 UTC</createdTime>
+<ownerDesignName>ARLconceptual</ownerDesignName>
+<engineerTo>
+<item key="7BFB7F21-3CE5-3F74-5424-AD96AB389096" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+</Attribute>
+<Attribute name="external_name" id="E58757BD-B1BB-E5CB-5D19-176899BE6132">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-23 21:25:45 UTC</createdTime>
+<ownerDesignName>ARLconceptual</ownerDesignName>
+<engineerTo>
+<item key="7BFB7F21-3CE5-3F74-5424-AD96AB389096" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="8DB13ABF-49EB-BD54-D98E-85D9129717BE" name="{entity} PK">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-23 21:21:55 UTC</createdTime>
+<ownerDesignName>ARLconceptual</ownerDesignName>
+<engineerTo>
+<item key="7BFB7F21-3CE5-3F74-5424-AD96AB389096" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>05643DBC-8890-F11F-C102-33B00C15BB7F</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

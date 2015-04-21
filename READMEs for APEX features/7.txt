@@ -1,0 +1,25 @@
+Partners:
+Jeffrey Li - jl47232
+Jonathan Dang - jtd859
+
+Note to graders:
+Before starting the application, you must:
+
+Step 1:
+Log in with the following username:
+username: username
+password: password
+
+Step 2:
+Upload and run the following SQL script: DEMO_SCRIPTS.sql
+(This will create all the necessary tables in order to run and test the application
+feature)
+
+Step 3:
+Import the application: f13502.sql
+
+Step 4:
+In order to test the functionality of our File Uploading feature, you must first
+create a Project and fill out all of the required fields. Afterwards, you can
+go to the Files menu and upload you first file. You can then download the file
+that you've uploaded.

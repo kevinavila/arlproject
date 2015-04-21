@@ -1,0 +1,8 @@
+Homework 6 Submission
+Data Managment Spring 2015
+
+Robert Gehring
+Cassie Schwendiman
+
+To recreate out charts you must use the test data provided as it relies on certain formats such as 'M' or 'F' for male or female.
+

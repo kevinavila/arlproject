@@ -1,0 +1,208 @@
+DROP SEQUENCE NL_Division_seq ; 
+create sequence NL_Division_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger NL_Division_PK_trig 
+before insert on NL_Division
+for each row 
+begin 
+select NL_Division_seq.nextval into :new.division_id from dual; 
+end; 
+/
+alter table NL_Division add created date ; 
+alter table NL_Division add created_by VARCHAR2 (255) ; 
+alter table NL_Division add row_version_number integer ; 
+alter table NL_Division add updated date ; 
+alter table NL_Division add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger NL_Division_AUD_trig 
+before insert or update on NL_Division 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE NL_Document_seq ; 
+create sequence NL_Document_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger NL_Document_PK_trig 
+before insert on NL_Document
+for each row 
+begin 
+select NL_Document_seq.nextval into :new.document_id from dual; 
+end; 
+/
+alter table NL_Document add created date ; 
+alter table NL_Document add created_by VARCHAR2 (255) ; 
+alter table NL_Document add row_version_number integer ; 
+alter table NL_Document add updated date ; 
+alter table NL_Document add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger NL_Document_AUD_trig 
+before insert or update on NL_Document 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE NL_Lab_seq ; 
+create sequence NL_Lab_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger NL_Lab_PK_trig 
+before insert on NL_Lab
+for each row 
+begin 
+select NL_Lab_seq.nextval into :new.lab_id from dual; 
+end; 
+/
+alter table NL_Lab add created date ; 
+alter table NL_Lab add created_by VARCHAR2 (255) ; 
+alter table NL_Lab add row_version_number integer ; 
+alter table NL_Lab add updated date ; 
+alter table NL_Lab add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger NL_Lab_AUD_trig 
+before insert or update on NL_Lab 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE NL_Member_seq ; 
+create sequence NL_Member_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger NL_Member_PK_trig 
+before insert on NL_Member
+for each row 
+begin 
+select NL_Member_seq.nextval into :new.member_id from dual; 
+end; 
+/
+alter table NL_Member add created date ; 
+alter table NL_Member add created_by VARCHAR2 (255) ; 
+alter table NL_Member add row_version_number integer ; 
+alter table NL_Member add updated date ; 
+alter table NL_Member add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger NL_Member_AUD_trig 
+before insert or update on NL_Member 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP SEQUENCE NL_Membership_seq ; 
+create sequence NL_Membership_seq 
+start with 100 
+increment by 1 
+nomaxvalue 
+;
+
+create or replace trigger NL_Membership_PK_trig 
+before insert on NL_Membership
+for each row 
+begin 
+select NL_Membership_seq.nextval into :new.membership_id from dual; 
+end; 
+/
+alter table NL_Membership add created date ; 
+alter table NL_Membership add created_by VARCHAR2 (255) ; 
+alter table NL_Membership add row_version_number integer ; 
+alter table NL_Membership add updated date ; 
+alter table NL_Membership add updated_by VARCHAR2 (255) ; 
+/
+create or replace trigger NL_Membership_AUD_trig 
+before insert or update on NL_Membership 
+for each row 
+begin 
+  if inserting then 
+    :new.created := localtimestamp; 
+    :new.created_by := nvl(wwv_flow.g_user,user); 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+    :new.row_version_number := 1; 
+  elsif updating then 
+    :new.row_version_number := nvl(:old.row_version_number,1) + 1; 
+  end if; 
+  if inserting or updating then 
+    :new.updated := localtimestamp; 
+    :new.updated_by := nvl(wwv_flow.g_user,user); 
+  end if; 
+end; 
+/
+
+DROP INDEX NL_Lab_lab_id_FK_0 ;
+CREATE INDEX NL_Lab_lab_id_FK_0 ON NL_Division(NL_Lab_lab_id) ;
+DROP INDEX NL_Member_member_id_FK_1 ;
+CREATE INDEX NL_Member_member_id_FK_1 ON NL_Document(NL_Member_member_id) ;
+DROP INDEX ARLNL_List_Member_memb_FK_2 ;
+CREATE INDEX ARLNL_List_Member_memb_FK_2 ON NL_Membership(ARLNL_List_Member_member_id) ;
+DROP INDEX NL_Member_member_id_FK_3 ;
+CREATE INDEX NL_Member_member_id_FK_3 ON NL_Membership(NL_Member_member_id) ;

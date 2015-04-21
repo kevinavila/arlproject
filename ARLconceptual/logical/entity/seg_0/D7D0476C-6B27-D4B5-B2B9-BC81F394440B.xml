@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="D7D0476C-6B27-D4B5-B2B9-BC81F394440B" name="NL_Lab">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-21 03:18:39 UTC</createdTime>
+<ownerDesignName>ARLconceptual</ownerDesignName>
+<engineerTo>
+<item key="7BFB7F21-3CE5-3F74-5424-AD96AB389096" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="lab_id" id="FFCD945D-B984-616F-989C-D3753743ED62">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-21 03:18:51 UTC</createdTime>
+<ownerDesignName>ARLconceptual</ownerDesignName>
+<engineerTo>
+<item key="7BFB7F21-3CE5-3F74-5424-AD96AB389096" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7D9DB008-B8D7-5419-0AFB-383616C2E85A" name="{entity} PK">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-21 03:19:01 UTC</createdTime>
+<ownerDesignName>ARLconceptual</ownerDesignName>
+<engineerTo>
+<item key="7BFB7F21-3CE5-3F74-5424-AD96AB389096" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>FFCD945D-B984-616F-989C-D3753743ED62</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

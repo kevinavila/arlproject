@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="475DED5E-4A64-47D6-6881-2449F65E0D75" mainViewID="B0EF859C-EFC0-B96E-1E90-98BF16C47181">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-23 21:16:18 UTC</createdTime>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

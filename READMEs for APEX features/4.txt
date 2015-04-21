@@ -1,0 +1,27 @@
+##Homework 6 - Implementing an APEX Feature
+####URL, Login, and Password for app:
+- https://apexea.oracle.com/pls/apex/f?p=1644:1:100980970815865:::::
+- TEST
+- password1234
+
+####Group members: Taylor Smith, Brian Quimio, Daniel Klein
+For homework 6 we chose to try and add the ability to upload and download files. Apex documentation talked about how this had changed and how to support it but was not very clear about what had to be done at the database level. Most of the [documentation for the previous version](http://docs.oracle.com/cd/E14373_01/appdev.32/e13363/up_dn_files.htm#CJAJJEGE) was out of date and so we looked up other ways of doing this.
+
+####Setting up the database
+One way to store a file is to use a certain data type called a [blob](http://docs.oracle.com/javadb/10.10.1.2/ref/rrefblob.html). This is a binary large object. So in order to use this we have to either alter a current table or add a new table to store this information. In order to test this we attempted to create a new document table to store uploaded documents. We also wanted to store information about the file and so we used oracle data modeler to start.
+The first step was to create a table with the following logical model:
+
+We then converted to the relational model that looks like this:
+
+This model works for a seperate table but if you wanted to add more information to accompany the file you could. You could also relate the document to some other table in the normal rdms style. We then ran this through the 2 parsers to generate the triggers and sequences that we need to keep track of timestamps and ids.
+
+####Creating the form and report
+Next we need to create a form and a report. Like we did in class we can select the form with report option to do this. Once we have clicked on the create a form on a report, we have to select the fields we want to display. We chose to display everything so that we can see the metadata about the file once we uploaded it. For the report however you have to chose only the blob field as the input for the report (unless you have other information you want to include with the document or upload.). We do this so that the user can't edit the other file information details because we wanted to get it from the file metadata.
+
+If the table was created correctly it can recognize this as a file upload field and it should produce the correct form. At this point you should be able to upload files but will not get the meta-data. It should also include an option to download the newly uploaded file if you selected it during the setup process.
+
+####Including the metadata
+The last step was to include metadata. If you are in the application builder you can go to the form edit page. On this page there should be an option to edit the attached file field on the form. You want to select the attach file field and not document id field! This page has settings for the file upload. There should be a section titled settings and here you can set the upload to save the metadata of the file. Use the column names that correspond to the data that you want to save. Make sure that you use uppercase or this will not work.
+
+####It works!
+At this point you should be able to test it by uploading a file and seeing the file, the metadata about the file, and a link to download it.

@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8296E030-C57B-614E-503B-86C304F4645D" name="ARLNL_Division">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-21 03:21:53 UTC</createdTime>
+<generatorID>16431EA6-18CE-AAF8-C3F4-0F930350F956</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="division_id" id="F3187F8B-1CD3-8A18-A247-DE16507F11A8">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-21 03:21:53 UTC</createdTime>
+<generatorID>E61270BA-40D8-CE30-8B8A-799EB7E95F15</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ARLNL_Lab_lab_id" id="214895C0-AE2D-8757-A9F3-29ED3CFF3EED">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-21 03:21:53 UTC</createdTime>
+<generatorID>35AF3508-9FB7-90C7-0886-ED5914C3BCC2</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<delegate>80E68303-C184-0612-E2EA-0199B63799D9</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="8BEF6043-E778-B6CC-B204-D499326B9A42" referredColumn="80E68303-C184-0612-E2EA-0199B63799D9"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="526A8321-74C0-3FFE-A143-3EBCD234B6AC" name="ARLNL_Division_PK">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-21 03:21:53 UTC</createdTime>
+<generatorID>31AD8115-DA13-EC63-B32B-63D81AFCC540</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3187F8B-1CD3-8A18-A247-DE16507F11A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="25E83882-C615-DA66-1809-0B77F1AE9868" name="ARLNL_Division_ARLNL_Lab_FK">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-21 03:21:53 UTC</createdTime>
+<generatorID>97E8069D-6BBE-54A0-157E-F82A40C9363F</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="214895C0-AE2D-8757-A9F3-29ED3CFF3EED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

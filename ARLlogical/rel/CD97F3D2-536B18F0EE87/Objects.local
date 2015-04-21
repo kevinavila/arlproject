@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="8296E030-C57B-614E-503B-86C304F4645D" name="ARLNL_Division" seqName="seg_0"/>
+   <object objectType="Table" objectID="A4AE02A1-FE54-6F86-E585-1BE1E7322115" name="ARLNL_Document" seqName="seg_0"/>
+   <object objectType="Table" objectID="8B38319F-8E10-DB71-AEF7-984364B371D5" name="ARLNL_Lab" seqName="seg_0"/>
+   <object objectType="Table" objectID="412518D7-E226-5221-82D0-FB532B742EFD" name="ARLNL_List_Member" seqName="seg_0"/>
+   <object objectType="Table" objectID="B390C432-4000-9CDD-EB48-25757D27FB50" name="ARLNL_Membership" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="8BEF6043-E778-B6CC-B204-D499326B9A42" name="ARLNL_Division_ARLNL_Lab_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="7ADFCCE6-D1DB-C398-C1CB-05385713A8AE" name="ARLNL_Document_ARLNL_List_Member_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="DF589C95-F024-0123-C15F-6E01AA7CE52A" name="ARLNL_Membership_ARLNL_List_Member_FK" seqName="seg_0"/>
+   <object objectType="FKIndexAssociation" objectID="1E35689C-017F-664A-471F-DACF33177131" name="ARLNL_Membership_ARLNL_List_Member_FKv1" seqName="seg_0"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

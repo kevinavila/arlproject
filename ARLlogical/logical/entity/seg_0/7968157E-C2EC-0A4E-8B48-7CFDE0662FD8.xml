@@ -1,0 +1,98 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7968157E-C2EC-0A4E-8B48-7CFDE0662FD8" name="NL_Membership">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-29 23:14:19 UTC</createdTime>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<engineerTo>
+<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="membership_id" id="1E27A8A3-3022-264E-C6F2-3004A725FABD">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-29 23:16:12 UTC</createdTime>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<engineerTo>
+<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="date_added" id="71E1895F-1041-4AE7-A25E-4A1F761F0B01">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-29 23:14:49 UTC</createdTime>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<engineerTo>
+<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Attribute>
+<Attribute name="membership_division" id="1B43C0D5-71F0-40D1-07C7-E62E34A94AC4">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-30 00:01:29 UTC</createdTime>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<engineerTo>
+<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+</Attribute>
+<Attribute name="member_id" id="9F812098-5ABA-3310-CEEC-120D3626C3CE">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-29 23:15:35 UTC</createdTime>
+<generatorID>0A56E1C7-161E-33E0-0FF3-9D1A31B2AF9F</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<engineerTo>
+<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>47A4407D-16CE-5E3C-6153-47049382D96B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+<Attribute name="member_id1" id="3ECA7938-D435-14E3-8BCE-A72D125E5003">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-31 00:41:15 UTC</createdTime>
+<generatorID>6C386250-16F9-1423-BC5A-24DD64A094A6</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<engineerTo>
+<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>47A4407D-16CE-5E3C-6153-47049382D96B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="D1279537-7B32-24A8-78FB-5797C76060E7" name="{entity} PK">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-03-29 23:16:19 UTC</createdTime>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1E27A8A3-3022-264E-C6F2-3004A725FABD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

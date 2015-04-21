@@ -1,0 +1,66 @@
+Farhan Islam
+Mark Mansi
+
+Brief summary
+=============
+
+We added an authorization scheme to allow or disallow certain users to edit the contents of the database.
+We created two users, layman and priveleged. layman only has permissions to view the data in the interactive reports, while priveleged has permissions to edit or add data to the database.
+APEX does not export users or user groups, so you will need to follow the steps in the first three sections below to import the webapp. Everything else should be ready when the webapp is imported.
+
+Creating users: Layman and Privleged
+====================================
+
+1    Click the Administration tab at the top right corner of the Application Builder. It looks like a person with a wrench.
+2    Select the "Manage Users and Groups" link.
+3    Click on the "Create Users" button.
+4    Enter a username, email address, and password.
+5    Click "Create User".
+6    Repeat for the second user. The names do not matter, but we named ours "layman" and "priveleged"
+
+Createing a group: Editors
+==========================
+
+1    On the same "Manage Users and Groups" page, click the "Groups" tab.
+2    Click "Create User Group".
+3    Give the group a name. We named ours "editors". This group will contain all users with editing permissions.
+
+Assigning users to groups
+=========================
+
+1    Go back to the "Users" tab.
+2    Select the user that you wish to editing priveleges.
+3    Scroll down to the bottom of the page, and add the user to the "editors" group.
+4    Click "Apply Changes"
+
+Create an APEX Authorization Scheme
+===================================
+
+1    Go to the application in the Application Builder.
+2    Follow the "Shared Components" link.
+3    Click "Authorization Schemes" under the "Security" section.
+4    Click "Create".
+5    Make sure "From Scratch" is selected, and click "Next".
+6    Give the scheme a name. We named ours "editors", and click "Create Authorization Scheme".
+7    Select the new scheme from the list.
+8    Under the "Authorization Scheme" section, in the "Scheme Type" select list choose "Is In Group".
+9    In the "Group Name" select list, choose the group you previously created.
+10    Click "Apply Changes".
+
+Requiring Authorization in the webapp
+=====================================
+
+1    Select a page on which you wish to require authorization, such as a page with an interactive report and editing capabilities.
+2    Go to that page in the Application Builder.
+3    Choose the interactive report for which you which to require authorization, and click the name of the report under the "Regions" section.
+4    Under the "Security" section, in the "Authorization Scheme" select list, choose the authorization scheme previously created.
+5    Click "Apply changes". This will cause the interactive report with editing controls to be invisible to users who are not authorized to edit.
+6    Create a new report on the page without editing controls. This is the report that will be displayed to unauthorized users.
+7    Click on the name of the report in the "Regions" section.
+8    Under the "Security" section, in the "Authorization Scheme" select list, choose the option that says "{Not <group name>}", where <group name> is the name of the group that has editing permissions. This specifies that any user not in the group will see this report.
+9    Click "Apply Changes".
+10    Go back to the application page in the Application Builder, and select the form corresponding to the report you just changed.
+11    Under the "Page" section, click the page name.
+12    Under the "Security" section, in the "Authroization Scheme" select list, choose the scheme that you defined previously. This will cause unauthorized users to receive an "Access Denied" message if they try to access the form page.
+13    Click "Apply Changes".
+14    Repeat for all pages on which you wish to use the authorization scheme.

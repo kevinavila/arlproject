@@ -1,0 +1,43 @@
+Sai Avala
+Shishir Madari
+Rohit Pattanaik 
+Jason Wu
+
+For this homework assignment we decided to add html5 video, as well as a "Download" button to each page where a table is shown to export
+the data as a csv file.
+
+
+Here are the steps to embed html5 video:
+   -- On the home page, create a region and select Static Content
+   -- The modal will popup
+      1. Change the Title and leave everything else as default and click next
+      2. On the second page, where it says "Enter Region Source", that is where you will include an ifram link to embed youtube videos
+      3. Click next and make sure the Output is HTML
+      4. Click Finish
+
+
+Here are the steps to create a "Download" button to export:
+   -- Look at the button section and create a new button
+   -- The modal will popup
+      1. Create a button name
+      2. Fill in the text label - this is the display label on the webapp
+      3. Assign a static id - this is the ID for javascript selector
+      4. Click Finish
+      5. Now create a Dynamic Region
+      6. Give it a name
+      7. Make sure "Event" is Click, "Selection Type" is Button, and "Button" is the button you created for that page
+      8. Make the Dynamic Region Execute Javascript
+      9. Include this javascript
+              $(document).ready(function() {
+  
+                    var pID = $v('pFlowId');
+                    var pStepId = $v('pFlowStepId');
+                    var pIn = $v('pInstance');
+                    var url = 'http://apexea.oracle.com/pls/apex/f?p=' + pID + ':' + pStepId + ':' + pIn + ':CSV:';
+
+                    window.open(url, "_blank");
+
+                    console.log(url);
+
+                });
+      10. Click Finish

@@ -1,0 +1,25 @@
+Terrence Maas,  tjm2578, bigrfish
+Eduardo Romero, er23799, ieduardo
+
+
+
+Below are the SQL scripts we used to create our views:
+
+
+CREATE OR REPLACE FORCE VIEW "SIM_DEPT_BUDGET" ("Dept. Name", "Number of Projects", "Number of Managers", "Number of Employees", "Dept. Cost") AS 
+  SELECT dept.NAME as "Dept. Name", COUNT(project.PROJECT_ID) as "Number of Projects",
+    COUNT(DISTINCT mgr.PERSON_ID) as "Number of Managers",
+    COUNT(DISTINCT person.PERSON_ID) as "Number of Employees", SUM(mgr.SALARY)+SUM(person.SALARY) as "Dept. Cost"
+FROM SIM_DEPT dept left outer join SIM_PROJECT project on (project.SIM_DEPT_DEPT_ID = dept.DEPT_ID)
+    join SIM_MANAGER mgr on (mgr.PERSON_ID = dept.SIM_PERSON_PERSON_ID)
+    join SIM_PERSON person on (person.SIM_DEPT_DEPT_ID = dept.DEPT_ID)
+GROUP BY dept.NAME
+;
+
+
+CREATE OR REPLACE FORCE VIEW "SIM_PROJECT_BUDGET" ("Project Name", "Number of Employees", "Project Cost") AS 
+  SELECT project.NAME as "Project Name", COUNT(pp.PER_PROJ) as "Number of Employees", SUM(person.SALARY) as "Project Cost"
+FROM SIM_PROJECT project join SIM_P2P pp on (project.PROJECT_ID = pp.SIM_PROJECT_PROJECT_ID)
+    join SIM_PERSON person on (person.PERSON_ID = pp.SIM_PERSON_PERSON_ID)
+GROUP BY project.NAME
+;
