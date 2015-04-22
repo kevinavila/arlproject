@@ -4,7 +4,7 @@ drop view ARL_notification_list ;
 drop view ARL_admin_employee ;
 
 create view ARL_employee as
-SELECT MEMBER_ID, TYPE, NAME, DIVISION, LAB_CODE
+SELECT MEMBER_ID, TYPE, NAME, STATUS, DIVISION, LAB_CODE
 FROM NL_MEMBER
 WHERE TYPE = 'Employee' ;
 
@@ -12,16 +12,18 @@ create or replace TRIGGER employee_trigger
      INSTEAD OF insert ON ARL_employee
      FOR EACH ROW
 BEGIN
-     insert into so_person(
+     insert into nl_member(
         MEMBER_ID,
         TYPE,
         NAME,
+        STATUS,
         DIVISION,
         LAB_CODE)
      VALUES (
         :new.MEMBER_ID,
         'Employee',
         :new.NAME,
+        :new.STATUS,
         :new.DIVISION,
         :new.LAB_CODE) ;
 END;
@@ -36,7 +38,7 @@ create or replace TRIGGER standard_employee_trigger
      INSTEAD OF insert ON ARL_standard_employee
      FOR EACH ROW
 BEGIN
-     insert into so_person(
+     insert into nl_member(
         MEMBER_ID,
         TYPE,
         NAME,
@@ -60,7 +62,7 @@ create or replace TRIGGER notification_list_trigger
      INSTEAD OF insert ON ARL_notification_list
      FOR EACH ROW
 BEGIN
-     insert into so_person(
+     insert into nl_member(
         MEMBER_ID,
         TYPE,
         NAME,
@@ -92,7 +94,7 @@ create or replace TRIGGER admin_employee_trigger
      INSTEAD OF insert ON ARL_admin_employee
      FOR EACH ROW
 BEGIN
-     insert into so_person(
+     insert into nl_member(
         MEMBER_ID,
         TYPE,
         NAME,
