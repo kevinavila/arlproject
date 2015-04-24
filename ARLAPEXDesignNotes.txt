@@ -1,0 +1,47 @@
+ARL project notes
+
+
+how to give correct priviledges to the respective user?
+following is dependant on user status (regular, standard, admin)
+Use authorization scheme (created using SQL)?
+
+
+
+
+---------notification list page---------
+
+when new list is created:
+-status has to be set automatically to active
+-automatically set the creation date and status effective date to the current system date
+-ownership division code should default to the user’s division, but can be overwritten
+-if a user changes the status, status_effective_date must be set to current date
+
+list maintenance can be taken care of here
+
+
+---------employee page--------------
+
+
+add employees/delete employees (seperate from )
+
+
+--------membership page---------------
+
+maintain membership of a list. When page is opened, maybe have option to choose list?
+once list is chosen, you can remove and add employees to lists and have various search features (look at Maintain Individual List Membership section in project documentation)
+
+--------general maintanence page---------------
+
+Clone all current membership from one employee (either an Active or Inactive employee) to another employee (Active employee only)
+
+Remove a specific employee (Active or Inactive) from all mailing lists that they currently belong to
+
+View membership such that the user can see all lists that a given employee currently belongs to.
+
+
+--------document page-----------------
+
+apex user can upload and download documents. 
+
+
+

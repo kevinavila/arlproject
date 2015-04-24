@@ -2,11 +2,11 @@
 <oracle.dbtools.crest.model.design.logical.LogicalDesign>
    <object objectType="Entity" objectID="16431EA6-18CE-AAF8-C3F4-0F930350F956" name="NL_Division" seqName="seg_0"/>
    <object objectType="Entity" objectID="2D83C8DA-CCB1-96B8-4F0C-6F0527FFFF79" name="NL_Document" seqName="seg_0"/>
-   <object objectType="Entity" objectID="9E0EA3BE-F073-1732-6C7C-490E38FCFCF2" name="NL_Lab" seqName="seg_0"/>
    <object objectType="Entity" objectID="3D850615-122E-56CC-56DE-F19149BEA491" name="NL_Member" seqName="seg_0"/>
    <object objectType="Entity" objectID="7968157E-C2EC-0A4E-8B48-7CFDE0662FD8" name="NL_Membership" seqName="seg_0"/>
+   <object objectType="Entity" objectID="9E0EA3BE-F073-1732-6C7C-490E38FCFCF2" name="NL_Lab" seqName="seg_0"/>
    <object objectType="Relation" objectID="0A56E1C7-161E-33E0-0FF3-9D1A31B2AF9F" name="r1" seqName="seg_0"/>
    <object objectType="Relation" objectID="6C386250-16F9-1423-BC5A-24DD64A094A6" name="r2" seqName="seg_0"/>
-   <object objectType="Relation" objectID="FACF87DE-2C64-290F-19FE-D6A8C0063004" name="r3" seqName="seg_0"/>
    <object objectType="Relation" objectID="97E8069D-6BBE-54A0-157E-F82A40C9363F" name="r4" seqName="seg_0"/>
+   <object objectType="Relation" objectID="FACF87DE-2C64-290F-19FE-D6A8C0063004" name="r3" seqName="seg_0"/>
 </oracle.dbtools.crest.model.design.logical.LogicalDesign>
