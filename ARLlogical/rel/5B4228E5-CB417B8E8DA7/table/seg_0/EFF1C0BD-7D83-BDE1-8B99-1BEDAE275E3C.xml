@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EFF1C0BD-7D83-BDE1-8B99-1BEDAE275E3C" name="NL_Membership">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>7968157E-C2EC-0A4E-8B48-7CFDE0662FD8</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="membership_id" id="9BBAA639-19BC-0795-B71E-353E58B653A8">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>1E27A8A3-3022-264E-C6F2-3004A725FABD</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="date_added" id="7B4758F1-118A-F809-75A3-4176C8B335F8">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>71E1895F-1041-4AE7-A25E-4A1F761F0B01</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="membership_division" id="05D4D0F5-8C3E-7B5A-FEBC-9BE78A5A534C">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>1B43C0D5-71F0-40D1-07C7-E62E34A94AC4</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NL_Member_member_id" id="B07C8826-48AD-573D-025D-EB2A9D44890F">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>9F812098-5ABA-3310-CEEC-120D3626C3CE</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>E4018D51-8A28-08EF-294B-583B96FD51CB</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6463B57C-385F-E80C-F338-1DDFF31B58DB" referredColumn="E4018D51-8A28-08EF-294B-583B96FD51CB"/>
+</associations>
+</Column>
+<Column name="NL_Member_member_id1" id="31291099-A291-20C2-1572-D23BEC9C8F75">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>3ECA7938-D435-14E3-8BCE-A72D125E5003</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>E4018D51-8A28-08EF-294B-583B96FD51CB</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A5F2F679-240A-AC1D-943B-F5490BE8486F" referredColumn="E4018D51-8A28-08EF-294B-583B96FD51CB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="278E80D7-14EF-65E5-8968-121A380B807A" name="NL_Membership_PK">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>D1279537-7B32-24A8-78FB-5797C76060E7</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BBAA639-19BC-0795-B71E-353E58B653A8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B728FB1A-2EA2-0561-36F6-2CD4C47B03F4" name="NL_Membership_NL_Member_FK">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>0A56E1C7-161E-33E0-0FF3-9D1A31B2AF9F</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B07C8826-48AD-573D-025D-EB2A9D44890F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="984D460E-8644-02BD-3567-8770C0171AED" name="NL_Membership_NL_Member_FKv1">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>6C386250-16F9-1423-BC5A-24DD64A094A6</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="31291099-A291-20C2-1572-D23BEC9C8F75"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

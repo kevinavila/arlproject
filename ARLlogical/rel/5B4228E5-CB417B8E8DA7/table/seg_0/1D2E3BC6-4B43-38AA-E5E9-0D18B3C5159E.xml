@@ -1,0 +1,133 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1D2E3BC6-4B43-38AA-E5E9-0D18B3C5159E" name="NL_Document">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>2D83C8DA-CCB1-96B8-4F0C-6F0527FFFF79</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="document_id" id="899448AE-920C-67C0-26FB-CDAA56D91F31">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>A79CB55A-C57A-8BBF-E985-C722202439AA</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="filename" id="3408953D-F002-BDAE-B285-B8488DDE3455">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>C6C9BE2F-49B6-A949-537C-B645F2C845CB</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000 BYTE</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_mimetype" id="B6F1C82F-A2BA-AAFD-354D-916FF0FF7DC2">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>19895FAF-FED0-10EE-408A-C4EBACF39014</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_charset" id="0A005A71-6B8D-C37E-71CE-503A7EA288F9">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>289E5264-2E6F-1C70-4908-786E01DA8F51</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>512</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_data" id="AB168EC5-C38B-24AB-8143-53979020E13A">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>6D1D9821-327A-E821-FA61-6179D0FC0D4C</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT029</logicalDatatype>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="file_comments" id="275F6AD3-98EF-BE73-40DC-3D19304E03C7">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>55B257A3-3E5A-A3CC-5CC4-1D2787624E0B</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tags" id="4DAC55CA-DFFD-A5C8-EB06-134CC0107030">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>9B130A43-C72A-C869-652F-47E81ADD4143</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NL_Member_member_id" id="1EE32C7D-7937-F13B-122C-F04B5AD9CB5D">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>27C60D69-964C-625B-1A7F-77260DEE8135</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<delegate>E4018D51-8A28-08EF-294B-583B96FD51CB</delegate>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="91FC3F06-D2FC-F8CE-13CB-28E49BC40D9E" referredColumn="E4018D51-8A28-08EF-294B-583B96FD51CB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D4D4E85B-7A2E-5838-DF4C-2C19709C54C9" name="NL_Document_PK">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>81EB7FB1-DF36-AED7-CA68-C53538F619AC</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="899448AE-920C-67C0-26FB-CDAA56D91F31"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="778E5937-9FBC-1608-7909-336AB69B08F8" name="NL_Document_NL_Member_FK">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 01:03:39 UTC</createdTime>
+<generatorID>FACF87DE-2C64-290F-19FE-D6A8C0063004</generatorID>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1EE32C7D-7937-F13B-122C-F04B5AD9CB5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

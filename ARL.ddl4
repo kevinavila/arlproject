@@ -1,15 +1,21 @@
-drop view ARL_employee ;
-drop view ARL_standard_employee ;
-drop view ARL_notification_list ;
-drop view ARL_admin_employee ;
+drop view NL_employee ;
+drop view NL_standard_employee ;
+drop view NL_notification_list ;
+drop view NL_admin_employee ;
 
-create view ARL_employee as
-SELECT MEMBER_ID, TYPE, NAME, STATUS, DIVISION, LAB_CODE
+drop trigger employee_trigger ;
+drop trigger standard_employee_trigger ;
+drop trigger notification_list_trigger;
+drop trigger admin_employee_trigger ;
+
+
+create view NL_employee as
+SELECT MEMBER_ID, TYPE, NAME, STATUS, IS_ADMIN, IS_STANDARD_USER, DIVISION, LAB_CODE
 FROM NL_MEMBER
 WHERE TYPE = 'Employee' ;
 
 create or replace TRIGGER employee_trigger
-     INSTEAD OF insert ON ARL_employee
+     INSTEAD OF insert ON NL_employee
      FOR EACH ROW
 BEGIN
      insert into nl_member(
@@ -17,6 +23,8 @@ BEGIN
         TYPE,
         NAME,
         STATUS,
+        IS_ADMIN,
+        IS_STANDARD_USER,
         DIVISION,
         LAB_CODE)
      VALUES (
@@ -24,42 +32,50 @@ BEGIN
         'Employee',
         :new.NAME,
         :new.STATUS,
+        :new.IS_ADMIN,
+        :new.IS_STANDARD_USER,
         :new.DIVISION,
         :new.LAB_CODE) ;
 END;
 /
 
-create view ARL_standard_employee as
-SELECT MEMBER_ID, TYPE, NAME, DIVISION, LAB_CODE
+create view NL_standard_employee as
+SELECT MEMBER_ID, TYPE, NAME, STATUS, IS_ADMIN, IS_STANDARD_USER, DIVISION, LAB_CODE
 FROM NL_MEMBER
 WHERE TYPE = 'Standard Employee' ;
 
 create or replace TRIGGER standard_employee_trigger
-     INSTEAD OF insert ON ARL_standard_employee
+     INSTEAD OF insert ON NL_standard_employee
      FOR EACH ROW
 BEGIN
      insert into nl_member(
         MEMBER_ID,
         TYPE,
         NAME,
+        STATUS,
+        IS_ADMIN,
+        IS_STANDARD_USER,
         DIVISION,
         LAB_CODE)
      VALUES (
         :new.MEMBER_ID,
         'Standard Employee',
         :new.NAME,
+        :new.STATUS,
+        :new.IS_ADMIN,
+        :new.IS_STANDARD_USER,
         :new.DIVISION,
         :new.LAB_CODE) ;
 END;
 /
 
-create view ARL_notification_list as
+create view NL_notification_list as
 SELECT MEMBER_ID, TYPE, NAME, STATUS, STATUS_EFFECTIVE_DATE, DIVISION, LAB_CODE, DESCRIPTION, EXTERNAL_NAME
 FROM NL_MEMBER
 WHERE TYPE = 'Notification List' ;
 
 create or replace TRIGGER notification_list_trigger
-     INSTEAD OF insert ON ARL_notification_list
+     INSTEAD OF insert ON NL_notification_list
      FOR EACH ROW
 BEGIN
      insert into nl_member(
@@ -85,25 +101,31 @@ BEGIN
 END;
 /
 
-create view ARL_admin_employee as
-SELECT MEMBER_ID, TYPE, NAME, DIVISION, LAB_CODE
+create view NL_admin_employee as
+SELECT MEMBER_ID, TYPE, NAME, STATUS, IS_ADMIN, IS_STANDARD_USER, DIVISION, LAB_CODE
 FROM NL_MEMBER
 WHERE TYPE = 'Admin Employee' ;
 
 create or replace TRIGGER admin_employee_trigger
-     INSTEAD OF insert ON ARL_admin_employee
+     INSTEAD OF insert ON NL_admin_employee
      FOR EACH ROW
 BEGIN
      insert into nl_member(
         MEMBER_ID,
         TYPE,
         NAME,
+        STATUS,
+        IS_ADMIN,
+        IS_STANDARD_USER,
         DIVISION,
         LAB_CODE)
      VALUES (
         :new.MEMBER_ID,
         'Admin Employee',
         :new.NAME,
+        :new.STATUS,
+        :new.IS_ADMIN,
+        :new.IS_STANDARD_USER,
         :new.DIVISION,
         :new.LAB_CODE) ;
 END;

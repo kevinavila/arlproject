@@ -4,7 +4,7 @@
 <createdTime>2015-03-23 21:19:57 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <adequatelyNormalized>NO</adequatelyNormalized>
 <expectedVolumes>0</expectedVolumes>
@@ -20,7 +20,7 @@
 <createdTime>2015-03-23 21:20:23 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -31,7 +31,7 @@
 <createdTime>2015-03-29 23:07:52 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -44,7 +44,7 @@
 <createdTime>2015-03-29 23:03:14 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -57,7 +57,7 @@
 <createdTime>2015-03-29 23:05:39 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -70,19 +70,45 @@
 <createdTime>2015-03-29 23:06:03 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT007</logicalDatatype>
 </Attribute>
+<Attribute name="is_admin" id="0B565E42-E669-A6F1-675D-16779A6FEA54">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 00:57:07 UTC</createdTime>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<engineerTo>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
+<Attribute name="is_standard_user" id="166241E7-F2F7-029A-331A-CEF9F8CA3A09">
+<createdBy>Klownin</createdBy>
+<createdTime>2015-04-25 00:57:20 UTC</createdTime>
+<ownerDesignName>ARLlogical</ownerDesignName>
+<engineerTo>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+</Attribute>
 <Attribute name="division" id="697AF1BB-7338-22AE-5149-A28186AAEFD5">
 <createdBy>Klownin</createdBy>
 <createdTime>2015-03-29 23:09:03 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -95,7 +121,7 @@
 <createdTime>2015-03-29 23:09:39 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -108,7 +134,7 @@
 <createdTime>2015-03-29 23:11:27 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -121,7 +147,7 @@
 <createdTime>2015-03-29 23:12:02 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="true"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -135,9 +161,8 @@
 <createdBy>Klownin</createdBy>
 <createdTime>2015-03-23 21:20:43 UTC</createdTime>
 <ownerDesignName>ARLlogical</ownerDesignName>
-<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="CD97F3D2-5955-9F2C-7108-536B18F0EE87" value="false"/>
+<item key="5B4228E5-0413-5F39-CCBB-CB417B8E8DA7" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
