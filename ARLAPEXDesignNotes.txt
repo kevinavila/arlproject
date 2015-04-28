@@ -43,5 +43,10 @@ View membership such that the user can see all lists that a given employee curre
 
 apex user can upload and download documents. 
 
+page 19
+-take out member id field
+-change date created to system date
+-put drop of employees on created by
+
 
 

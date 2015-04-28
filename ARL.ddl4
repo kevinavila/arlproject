@@ -3,10 +3,10 @@ drop view NL_standard_employee ;
 drop view NL_notification_list ;
 drop view NL_admin_employee ;
 
-drop trigger employee_trigger ;
-drop trigger standard_employee_trigger ;
-drop trigger notification_list_trigger;
-drop trigger admin_employee_trigger ;
+--drop trigger employee_trigger ;
+--drop trigger standard_employee_trigger ;
+--drop trigger notification_list_trigger;
+--drop trigger admin_employee_trigger ;
 
 
 create view NL_employee as
@@ -32,8 +32,8 @@ BEGIN
         'Employee',
         :new.NAME,
         :new.STATUS,
-        :new.IS_ADMIN,
-        :new.IS_STANDARD_USER,
+        'N',
+        'N',
         :new.DIVISION,
         :new.LAB_CODE) ;
 END;
@@ -62,8 +62,8 @@ BEGIN
         'Standard Employee',
         :new.NAME,
         :new.STATUS,
-        :new.IS_ADMIN,
-        :new.IS_STANDARD_USER,
+        'N',
+        'Y',
         :new.DIVISION,
         :new.LAB_CODE) ;
 END;
@@ -92,7 +92,7 @@ BEGIN
         :new.MEMBER_ID,
         'Notification List',
         :new.NAME,
-        :new.STATUS,
+        'A',
         :new.STATUS_EFFECTIVE_DATE,
         :new.DIVISION,
         :new.LAB_CODE, 
@@ -124,8 +124,8 @@ BEGIN
         'Admin Employee',
         :new.NAME,
         :new.STATUS,
-        :new.IS_ADMIN,
-        :new.IS_STANDARD_USER,
+        'Y',
+        'N',
         :new.DIVISION,
         :new.LAB_CODE) ;
 END;
